@@ -1,0 +1,12 @@
+name: arcroulette
+main: arclegrandroi\arcroulette\Main
+api: 3.0.0
+version: 0.0.1
+depend: [EconomyAPI]
+
+
+commands:
+  roulette:
+    name: roulette
+    description: "gagner de l'argent avec la roulotte"
+    usage: "/roulotte <chiffre/couleur> <montant>"
