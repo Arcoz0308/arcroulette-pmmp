@@ -1,22 +1,43 @@
 #plugin make by arclegrandroi / plufin fait par arclegrandroi
-#      a         rr                  ccccc
-#     a a        r  r              ccc
-#    a   a       r   r           cc
-#   a     a      rr            cc
-#  aaaaaaaaa     r r            cc
-# a         a    r  r            ccc
-#a           a   r   r              ccccc
+#      a         rr              ccccc
+#     a a        r  r          ccc
+#    a   a       r   r       cc
+#   a     a      rr         cc
+#  aaaaaaaaa     r r         cc
+# a         a    r  r        ccc
+#a           a   r   r        ccccc
 
 #prix de participation 
 money: 3000
 
 #reglement du jeu (/roulotte regle)
-#pour passer de ligne ecriver [\n]
+#pour passer de ligne ecriver [\n
+#code couleur de base fonctionnel (exp §1)
 regle: "les regles\n ligne 2"
+
+#message de gagant avec chiffre
+#[$winnmr] = le chiffre qui est gagant(infonctionel)
+win: "vous avez gagner, le chiffre gagnant est le $winnmr"
+#message de perdant avec chiffre
+lose: "vous avez perdu, le chiffre gagnant est le $winnmr"
+
+#rouge choisis et rouge gagnant
+red_win: "vous avez gagner avec le rouge"
+#bleu choisis et rouge gagnant
+red_lose: "vous avez perdu avec le bleu"
+#bleu choisis et bleu gagnant
+bleu_win: "vous avez gagner avec le bleu"
+#rouge choisis et bleu gagnant
+bleu_lose: "vous avez perdu avec le rouge"
 
 #pas d'argument(/roulotte)
 no_arg: "faitent /roulotte regle pour avoir les regles du jeu de la roulotte"
+#argument incompatible
+notgod: "argument inconue"
 #pas asser d'argent
 no_money: "vous avez pas 3000 money pour participer"
 #trop de args
 many_args: "faitent /roulotte regles"
+#commande fait depuis console 
+in_game: "cette commende dois etre fait en jeu"
+
