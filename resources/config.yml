@@ -1,0 +1,22 @@
+#plugin make by arclegrandroi / plufin fait par arclegrandroi
+#      a         rr                  ccccc
+#     a a        r  r              ccc
+#    a   a       r   r           cc
+#   a     a      rr            cc
+#  aaaaaaaaa     r r            cc
+# a         a    r  r            ccc
+#a           a   r   r              ccccc
+
+#prix de participation 
+money: 3000
+
+#reglement du jeu (/roulotte regle)
+#pour passer de ligne ecriver [\n]
+regle: "les regles\n ligne 2"
+
+#pas d'argument(/roulotte)
+no_arg: "faitent /roulotte regle pour avoir les regles du jeu de la roulotte"
+#pas asser d'argent
+no_money: "vous avez pas 3000 money pour participer"
+#trop de args
+many_args: "faitent /roulotte regles"
