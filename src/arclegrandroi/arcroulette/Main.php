@@ -24,7 +24,7 @@ class Main extends PluginBase {
            $money = ($this->getConfig()->get("money"));
         if($command->getName() == "roulette") {
             $count = count($args);
-            if($count === 1) {
+            if($count == 1) {
                 if($sender instanceof Player) {
                 if($economy->myMoney($sender) >= $money)  {
                    if(isset($args[0])) {
@@ -38,18 +38,18 @@ class Main extends PluginBase {
                           $economy->reduceMoney($sender, $money);
                           $sender->sendMessage("vous avez perdu, le chiffre gagnant est le" . $r);
                        }
-                   } elseif($args[0] === "rouge"||$args[0] === "bleu") {
+                   } elseif($args[0] == "rouge"||$args[0] === "bleu") {
                        $rr = mt_rand(1,2);
-                       if($rr === 1) {
-                           if($args[0] === "rouge") {
+                       if($rr == 1) {
+                           if($args[0] == "rouge") {
                                $economy->addMoney($sender, $money);
                                $sender->sendMessage("vous avez gagnez, la couleur gagnante est le rouge");
                            } else {
                                $economy->reduceMoney($sender, $money);
                                $sender->sendMessage("vous avez perdu, la couleur gagnante est le rouge");
                            }
-                       } elseif($rr === 2) {
-                           if($args[0] === "bleu") {
+                       } elseif($rr == 2) {
+                           if($args[0] == "bleu") {
                                $economy->addMoney($sender, $money);
                                $sender->sendMessage("vous avez gagner, la couleur gagnante est le bleu");
                            } else {
@@ -57,7 +57,7 @@ class Main extends PluginBase {
                                $sender->sendMessage("vous avez perdu, la couleur gagnante est le bleu");
                            }
                        }   
-                   } elseif(args[0] === "regle") {
+                   } elseif(args[0] == "regle") {
                        $sender->sendMessage($this->getConfig()->get("regle"));
                    } else {
                        $sender->sendMessage($this->getConfig()->get("no_arg"));
