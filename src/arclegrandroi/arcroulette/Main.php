@@ -29,38 +29,38 @@ class Main extends PluginBase {
                 if($economy->myMoney($sender) >= $money)  {
                    if(isset($args[0])) {
                    if($args[0] >=1 && $args[0] <= 36) {
-                       $r = mt_rand(1, 36);
+                       $winnmr = mt_rand(1, 36);
                        $win = $money * 35;
-                       if($args[0] == $r) {
+                       if($args[0] == $winnmr) {
                            $economy->addMoney($sender, $win);
-                           $sender->sendMessage("vous avez gagner, le chiffre gagnant est le" . $r);
+                           $sender->sendMessage($this->getConfig()->get("win"));
                        } else {
                           $economy->reduceMoney($sender, $money);
-                          $sender->sendMessage("vous avez perdu, le chiffre gagnant est le" . $r);
+                          $sender->sendMessage($this->getConfig()->get("lose"));
                        }
-                   } elseif($args[0] == "rouge"||$args[0] === "bleu") {
+                   } elseif($args[0] == "rouge"||$args[0] == "bleu") {
                        $rr = mt_rand(1,2);
                        if($rr == 1) {
                            if($args[0] == "rouge") {
                                $economy->addMoney($sender, $money);
-                               $sender->sendMessage("vous avez gagnez, la couleur gagnante est le rouge");
+                               $sender->sendMessage($this->getConfig()->get("red_win"));
                            } else {
                                $economy->reduceMoney($sender, $money);
-                               $sender->sendMessage("vous avez perdu, la couleur gagnante est le rouge");
+                               $sender->sendMessage($this->getConfig()->get("red_lose"));
                            }
                        } elseif($rr == 2) {
                            if($args[0] == "bleu") {
                                $economy->addMoney($sender, $money);
-                               $sender->sendMessage("vous avez gagner, la couleur gagnante est le bleu");
+                               $sender->sendMessage($this->getConfig()->get("bleu_win"));
                            } else {
                                $economy->reduceMoney($sender, $money);
-                               $sender->sendMessage("vous avez perdu, la couleur gagnante est le bleu");
+                               $sender->sendMessage($this->getConfig()->get("bleu_lose"));
                            }
                        }   
                    } elseif(args[0] == "regle") {
                        $sender->sendMessage($this->getConfig()->get("regle"));
                    } else {
-                       $sender->sendMessage($this->getConfig()->get("no_arg"));
+                       $sender->sendMessage($this->getConfig()->get("notgod"));
                    }
                    } else {
                        $sender->sendMessage($this->getConfig()->get("no_arg"));
@@ -69,7 +69,7 @@ class Main extends PluginBase {
                     $sender->sendMessage($this->getConfig()->get("no_money"));
                 }
                 } else { 
-                    $sender->sendMessage("cette commande dois etre faitent en jeu");
+                    $sender->sendMessage($this->getConfig()->get("in_game"));
                 }  
                 } else {
                 $sender->sendMessage($this->getConfig()->get("many_args"));
