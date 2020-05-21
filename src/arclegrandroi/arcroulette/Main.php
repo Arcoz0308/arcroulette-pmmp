@@ -33,10 +33,14 @@ class Main extends PluginBase {
                        $win = $money * 35;
                        if($args[0] == $winnmr) {
                            $economy->addMoney($sender, $win);
-                           $sender->sendMessage($this->getConfig()->get("win"));
+                           $message2 = $this->getConfig()->get("win");
+                           $msg2 = str_replace("{win}", $winnmr, $message2);
+                           $sender->sendMessage($msg2);
                        } else {
                           $economy->reduceMoney($sender, $money);
-                          $sender->sendMessage($this->getConfig()->get("lose"));
+                          $message = $this->getConfig()->get("lose");
+                          $msg = str_replace("{win}", $winnmr, $message);
+                          $sender->sendMessage($msg);
                        }
                    } elseif($args[0] == "rouge"||$args[0] == "bleu") {
                        $rr = mt_rand(1,2);
