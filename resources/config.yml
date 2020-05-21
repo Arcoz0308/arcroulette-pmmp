@@ -16,10 +16,10 @@ money: 3000
 regle: "les regles\n ligne 2"
 
 #message de gagant avec chiffre
-#[$winnmr] = le chiffre qui est gagant(infonctionel)
-win: "vous avez gagner, le chiffre gagnant est le $winnmr"
+#{win} = le chiffre qui est gagant(infonctionel)
+win: "vous avez gagner, le chiffre gagnant est le {win}"
 #message de perdant avec chiffre
-lose: "vous avez perdu, le chiffre gagnant est le $winnmr"
+lose: "vous avez perdu, le chiffre gagnant est le {win}"
 
 #rouge choisis et rouge gagnant
 red_win: "vous avez gagner avec le rouge"
