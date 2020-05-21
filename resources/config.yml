@@ -16,7 +16,7 @@ money: 3000
 regle: "les regles\n ligne 2"
 
 #message de gagant avec chiffre
-#{win} = le chiffre qui est gagant(infonctionel)
+#{win} = le chiffre qui est gagant
 win: "vous avez gagner, le chiffre gagnant est le {win}"
 #message de perdant avec chiffre
 lose: "vous avez perdu, le chiffre gagnant est le {win}"
