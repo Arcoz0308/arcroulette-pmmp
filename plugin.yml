@@ -2,7 +2,8 @@ name: arcroulette
 main: arclegrandroi\arcroulette\Main
 api: 3.0.0
 version: 0.0.1
-depend: [EconomyAPI]
+depend:
+  - EconomyAPI
 
 
 commands:
