@@ -1,3 +1,6 @@
+# ⚠️ ARCHIVED ⚠️
+this repo is no longer maintained
+
 # arcroulette-pmmp
 roulette pour pocketmine-mp
 
